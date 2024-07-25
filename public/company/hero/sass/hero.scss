@@ -1,0 +1,427 @@
+// -----
+// 設定
+// -----
+
+// 色
+$color-main: #3f51b5; // ベース色
+$color-active: #e81919; // アクティブ色
+$color-background-base: #fff; // 背景色
+$color-text-base: #333; // テキスト色
+$hover-opacity: 0.6; // 透過度
+
+// レイアウト幅
+$layout-width-canvas: 1280px;
+$layout-width-inner: 1200px;
+
+// 階層
+$layer: (
+	modal: 100, // モダール
+	drawer: 40, // ドロワー
+	floating: 30, // フローティングアイテム
+	header: 20, // ヘッダー
+	footer: 10, // フッター
+	default: 1,
+);
+
+// 余白
+$padding-pc: 24px;
+$padding-tab: 24px;
+$padding-sp: 16px;
+
+// ヘッダー高さ
+$header-height-pc: 100px;
+$header-height-sp: 60px;
+
+// フォント
+$font-family-default: "游ゴシック体", "Yu Gothic", yugothic, "ヒラギノ角ゴ Pro", "Hiragino Kaku Gothic Pro", "メイリオ", meiryo, "MS Pゴシック", "MS PGothic", sans-serif; // 標準フォント
+$font-family-english: sans-serif;
+$font-family-base: $font-family-default;
+$font-size-base: 16px;
+$font-weight-base: 400;
+$line-height-base: 1.6;
+
+// ブレークポイント
+$breakpoints: (
+	"sp": "(max-width: 767px)",
+	"tab-only": "(min-width: 768px) and (max-width: #{$layout-width-inner + $padding-pc * 2 - 1px})",
+	"tab": "(max-width: #{$layout-width-inner + $padding-pc * 2 - 1px})",
+	"pc": "(min-width: #{$layout-width-inner})",
+);
+
+// メディアクエリー
+@mixin mq($breakpoint: sp) {
+	@media #{map-get($breakpoints, $breakpoint)} {
+		@content;
+	}
+}
+
+// -----
+// 初期化
+// -----
+*,
+*::before,
+*::after {
+	box-sizing: border-box;
+}
+
+html,
+body {
+	margin: 0;
+	padding: 0;
+}
+
+body {
+	font-family: $font-family-base;
+	font-size: $font-size-base;
+	font-weight: $font-weight-base;
+	color: $color-text-base;
+	line-height: $line-height-base;
+	-webkit-font-smoothing: antialiased;
+	-moz-osx-font-smoothing: grayscale;
+	background: $color-background-base;
+	overflow-x: hidden;
+	overflow-wrap: break-word;
+	padding-top: $header-height-pc;
+
+	@include mq('sp') {
+		padding-top: $header-height-sp;
+	}
+}
+
+img {
+	max-width: 100%;
+	height: auto;
+	border: none;
+}
+
+// -----
+// 補完クラス
+// -----
+
+// PCだけ非表示
+.hidden-pc {
+	@include mq('pc') {
+		display: none;
+	}
+}
+
+// タブレットだけ非表示
+.hidden-tab {
+	@include mq('tab-only') {
+		display: none;
+	}
+}
+
+// スマホだけ非表示
+.hidden-sp {
+	@include mq('sp') {
+		display: none;
+	}
+}
+
+// セクション
+.section {
+	padding-top: 100px;
+	padding-bottom: 120px;
+
+	@include mq('sp') {
+		padding-top: 40px;
+		padding-bottom: 80px;
+	}
+}
+
+// インナー
+.inner {
+	width: $layout-width-inner;
+	max-width: 100%;
+	margin: 0 auto;
+	height: inherit;
+
+	@include mq('tab') {
+		padding-left: $padding-tab;
+		padding-right: $padding-tab;
+	}
+
+	@include mq('sp') {
+		padding-left: $padding-sp;
+		padding-right: $padding-sp;
+	}
+}
+
+// 右矢印ボタン
+.button-arrow-right {
+	-webkit-appearance: none;
+	background: $color-main url(../img/icon-arrow-right.png) no-repeat center right 12px / 17px 16px;
+	box-shadow: 0 3px 6px rgba(#000, 0.16);
+	text-align: center;
+	border: none;
+	color: #fff;
+	cursor: pointer;
+	display: inline-block;
+	text-decoration: none;
+	padding: 14px 60px;
+	font-size: 16px;
+	border-radius: 8px;
+	font-weight: 700;
+	transition: all 0.3s ease 0s;
+	width: 304px;
+	max-width: 100%;
+	line-height: 1.6;
+
+	@include mq('sp') {
+		padding: 14px 32px;
+		width: 100%;
+	}
+}
+
+// セクションタイトル
+.section-title {
+	font-size: 48px;
+	font-weight: 700;
+	padding: 0 0 28px;
+	margin: 0;
+	position: relative;
+	text-align: center;
+	line-height: 1;
+
+	&::after {
+		content: "";
+		background: $color-main;
+		width: 60px;
+		height: 4px;
+		position: absolute;
+		bottom: 0;
+		left: 50%;
+		transform: translateX(-50%);
+
+		@include mq('sp') {
+			width: 48px;
+		}
+	}
+
+	@include mq('tab') {
+		font-size: 50px;
+		padding-bottom: 28px;
+	}
+
+	@include mq('sp') {
+		font-size: 42px;
+		padding-bottom: 16px;
+	}
+}
+
+// -----
+// ヘッダー
+// -----
+.header {
+	background: $color-main;
+	position: fixed;
+	top: 0;
+	left: 0;
+	width: 100%;
+	z-index: map-get($layer, 'header');
+	height: $header-height-pc;
+
+	@include mq('sp') {
+		height: $header-height-sp;
+	}
+}
+
+.header__inner {
+	display: flex;
+	align-items: center;
+	padding-top: 30px;
+	padding-bottom: 30px;
+
+	@include mq('sp') {
+		padding-top: 14px;
+		padding-bottom: 14px;
+	}
+}
+
+.header__logo {
+	margin: 0;
+	line-height: 1;
+
+	img {
+		width: 205px;
+		vertical-align: top;
+
+		@include mq('tab') {
+			width: 180px;
+		}
+
+		@include mq('sp') {
+			width: 148px;
+		}
+	}
+
+	a {
+		text-decoration: none;
+		transition: all 0.3s ease 0s;
+	}
+}
+
+.header__nav {
+	margin-left: auto;
+
+	@include mq('sp') {
+		display: none;
+	}
+
+	ul {
+		list-style: none;
+		padding: 0;
+		margin: 0;
+		display: flex;
+		align-items: center;
+
+		li {
+			margin-right: 40px;
+
+			&:last-child {
+				margin-right: 0;
+			}
+
+			a {
+				transition: all 0.3s ease 0s;
+				text-decoration: none;
+				color: #fff;
+				display: block;
+				position: relative;
+
+				&::after {
+					content: "";
+					position: absolute;
+					left: 0;
+					bottom: -5px;
+					width: 100%;
+					height: 2px;
+					background: $color-active;
+					opacity: 0;
+					transition: all 0.3s ease 0s;
+				}
+
+				&.is-active {
+					&::after {
+						opacity: 1;
+					}
+				}
+			}
+		}
+	}
+}
+
+// -----
+// メインビジュアル
+// -----
+.mainvisual {
+	height: 600px;
+	width: 100%;
+	background: transparent url(../img/mainvisual.png) no-repeat top center / cover;
+	position: relative;
+	overflow: hidden;
+
+	@include mq('tab') {
+		height: 600px;
+	}
+
+	@include mq('sp') {
+		height: 500px;
+	}
+}
+
+.mainvisual__content {
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+	width: 100%;
+	text-align: center;
+	line-height: 1.2;
+
+	@include mq('tab') {
+		padding-left: $padding-tab;
+		padding-right: $padding-tab;
+	}
+
+	@include mq('sp') {
+		padding-left: $padding-sp;
+		padding-right: $padding-sp;
+	}
+}
+
+.mainvisual__title {
+	font-size: 64px;
+	font-weight: 700;
+
+	@include mq('tab') {
+		font-size: 56px;
+	}
+
+	@include mq('sp') {
+		font-size: 36px;
+	}
+}
+
+.mainvisual__lead {
+	font-size: 24px;
+	font-weight: 700;
+	margin-top: 24px;
+
+	@include mq('tab') {
+		font-size: 30px;
+	}
+
+	@include mq('sp') {
+		font-size: 20px;
+	}
+}
+
+.mainvisual__button {
+	margin-top: 36px;
+
+	@include mq('tab') {
+		margin-top: 34px;
+	}
+
+	@include mq('sp') {
+		margin-top: 34px;
+	}
+}
+
+// ボタン（メインビジュアル）
+.button-mainvisual {
+	display: inline-block;
+	background: $color-main;
+	color: #fff;
+	text-align: center;
+	font-weight: 700;
+	text-decoration: none;
+	box-shadow: 0 3px 6px rgba(#000, 0.16);
+	cursor: pointer;
+	transition: all 0.3s ease 0s;
+	padding: 22px 24px;
+	border-radius: 8px;
+	font-size: 24px;
+	width: 384px;
+	max-width: 100%;
+
+	@include mq('sp') {
+		padding: 20px 36px;
+		font-size: 20px;
+		width: 280px;
+	}
+}
+
+.mainvisual {
+	height: calc(100vh - #{$header-height-pc});
+
+	@include mq('tab') {
+		height: calc(100vh - #{$header-height-pc});
+	}
+
+	@include mq('sp') {
+		height: calc(100vh - #{$header-height-sp});
+	}
+}

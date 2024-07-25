@@ -1,0 +1,414 @@
+<!DOCTYPE html>
+<html lang="ja">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Global Standard</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Fira+Sans:ital,wght@0,400;0,500;0,700;1,400;1,500;1,700&family=Roboto:ital,wght@1,700&family=Noto+Sans+JP:wght@400;500;700&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"
+    />
+
+    <link rel="stylesheet" href="./css/reset.css" />
+    <link rel="stylesheet" href="./css/style.css" />
+  </head>
+  <body>
+    <header class="header">
+      <div class="header_inner inner">
+        <div class="header_logo">
+          <h1><a href="./top.html">Global Standard</a></h1>
+        </div>
+        <nav class="header_nav">
+          <ul class="header_nav-links">
+            <li class="header_nav-link"><a href="./top.html">トップ</a></li>
+            <li class="header_nav-link">／</li>
+            <li class="header_nav-link">
+              <a href="./about.html">当社について</a>
+            </li>
+            <li class="header_nav-link">／</li>
+            <li class="header_nav-link">
+              <a href="./service.html">サービス</a>
+            </li>
+            <li class="header_nav-link">／</li>
+            <li class="header_nav-link"><a href="./case.html">導入事例</a></li>
+            <li class="header_nav-link">／</li>
+            <li class="header_nav-link"><a href="./news.html">お知らせ</a></li>
+          </ul>
+        </nav>
+        <div class="header_button">
+          <div class="header_button-link white_btn">
+            <a href="./download.html">資料ダウンロード</a>
+          </div>
+          <div class="header_button-link deep_btn">
+            <a href="./contact.html">お問い合わせ</a>
+          </div>
+        </div>
+        <div class="header_drawer-icon" id="js-drawer">
+          <div class="header_drawer-icon-bar"></div>
+          <div class="header_drawer-icon-bar"></div>
+          <div class="header_drawer-icon-bar"></div>
+        </div>
+      </div>
+
+      <div class="header_drawer">
+        <nav class="header_drawer-nav">
+          <ul class="header_drawer-nav-links">
+            <li class="header_drawer-nav-link">
+              <a href="./top.html">トップ</a>
+            </li>
+            <li class="header_drawer-nav-link">
+              <a href="./about.html">当社について</a>
+            </li>
+            <li class="header_drawer-nav-link">
+              <a href="./service.html">サービス</a>
+            </li>
+            <li class="header_drawer-nav-link">
+              <a href="./case.html">導入事例</a>  
+            </li>
+            <li class="header_drawer-nav-link">
+              <a href="./news.html">お知らせ</a>
+            </li>
+          </ul>
+        </nav>
+        <div class="header_drawer-button">
+          <div class="header_drawer-button-link deep_btn">
+            <a href="./download.html">資料ダウンロード</a>
+          </div>
+          <div class="header_drawer-button-link white_btn">
+            <a href="./contact.html">お問い合わせ</a>
+          </div>
+        </div>
+      </div>
+    </header>
+
+    <div class="top">
+      <div class="top_inner inner">
+        <!-- Slider main container -->
+        <div class="swiper">
+          <div class="top_texts">
+            <div class="top_text">
+              <h1>YOU CAN</h1>
+            </div>
+            <div class="top_text">
+              <h1>CHANGE</h1>
+            </div>
+            <div class="top_text">
+              <h1>THE WORLD</h1>
+            </div>
+            <div class="tp_texts-pc">
+              <div class="top_text-pc">
+                <h1>YOU CAN CHANGE</h1>
+              </div>
+              <div class="top_text-pc">
+                <h1>THE WORLD</h1>
+              </div>
+            </div>
+            <p class="top_sub-text">世界で活躍できるグローバルな人材を育てる</p>
+          </div>
+          <!-- Additional required wrapper -->
+          <div class="swiper-wrapper">
+            <!-- Slides -->
+            <div class="swiper-slide">
+              <picture class="">
+                <source media="(min-width: 768px)" srcset="./img/top_mv1.png" />
+                <img src="./img/top_mv1_sp.png" alt="top_mv" />
+              </picture>
+            </div>
+            <div class="swiper-slide">
+              <picture class="">
+                <source media="(min-width: 768px)" srcset="./img/top_mv2.png" />
+                <img src="./img/top_mv2_sp.png" alt="top_mv" />
+              </picture>
+            </div>
+            <div class="swiper-slide">
+              <picture class="">
+                <source media="(min-width: 768px)" srcset="./img/top_mv3.png" />
+                <img src="./img/top_mv3_sp.png" alt="top_mv" />
+              </picture>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <section class="about">
+      <div class="about_inner inner">
+        <div class="about_head">
+          <h2 class="about_head-title heading">ABOUT US</h2>
+          <p class="about_head-subtitle sub-heading">当社について</p>
+        </div>
+        <div class="about_container">
+          <div class="about_texts">
+            <p class="about_text">
+              急速に広がったグローバル社会に対応できる人材を育成することで、文化・言語の垣根を越えたコミュニケーションを活発にし、一人でも多くの人が豊かに暮らせる世界を実現することを使命とする。<br />
+              <br />
+              コミュニケーションスキル習得をサポートすることで一人でも多くのビジネスパーソンの視野を広げ、世界を舞台に新しい相乗効果を生む未来を創造する。<br />
+              <br />
+              文化の垣根を越えた人と人とのつながりが新しい価値を生むことを信念とする。
+            </p>
+          </div>
+          <div class="about_contents">
+            <div class="about_image">
+              <img src="./img/about.png" alt="about" />
+            </div>
+            <div class="about_image-back overlay">
+              <img src="./img/about_back.png" alt="about_back" />
+            </div>
+            <div class="about_vm">
+              <a href="./about.html">View more<span></span></a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="service">
+      <div class="service_inner inner">
+        <div class="service_head">
+          <h2 class="service_head-title heading">SERVICE</h2>
+          <p class="service_head-subtitle sub-heading">サービス</p>
+        </div>
+        <div class="service_contents">
+          <div class="service_content">
+            <div class="service_content-image">
+              <span class="service_number">01</span>
+              <span class="service_number">01</span>
+              <img src="./img/service_1.png" alt="service_1" />
+              <p class="service_content-title">ビジネス英語研修</p>
+            </div>
+            <div class="service_content-text">
+              ビジネス英会話はこれからの時代、すべてのビジネスパーソンが学ぶべき必須スキルと考えおります。海外にビジネス展開する際にはもちろんのこと、日本国内でも英会話コミュニケーションができることによってチャンスが掴める場面があります。
+            </div>
+          </div>
+          <div class="service_content">
+            <div class="service_content-image">
+              <span class="service_number">02</span>
+              <span class="service_number">02</span>
+              <img src="./img/service_2.png" alt="service_2" />
+              <p class="service_content-title title-top">異文化</p>
+              <p class="service_content-title">コミュニケーション研修</p>
+            </div>
+            <div class="service_content-text">
+              急速にグローバル化が進んでおり、ビジネスの場面に限らず様々な文化的背景を持つ者同士の交流はもはや日常的な光景となりました。<br />
+              言語や文化が異なる相手を理解することで世界が広がり、新たなビジネスチャンスに巡り会うことは少なくありません。
+            </div>
+          </div>
+          <div class="service_content">
+            <div class="service_content-image">
+              <span class="service_number">03</span>
+              <span class="service_number">03</span>
+              <img src="./img/service_3.png" alt="service_3" />
+              <p class="service_content-title title-top">ビジネス留学</p>
+              <p class="service_content-title">サポートプログラム</p>
+            </div>
+            <div class="service_content-text">
+              将来的に海外で働きたい方に向けた講座をご用意しております。一般的には3ヶ月〜1年の期間で基本的な英会話スキルと、海外でのビジネスマナー習得を目指します。<br />
+              通常の語学留学では得られないビジネスの場で通用するコミュニケーションスキル習得に重点をおいておりますので、海外でビジネス展開する際に自信を持って活動することができるようになります。
+            </div>
+          </div>
+        </div>
+        <div class="service_vm">
+          <a href="./service.html">View more<span></span></a>
+        </div>
+      </div>
+    </section>
+
+    <section class="cs">
+      <div class="cs_inner inner">
+        <div class="cs_head">
+          <h2 class="cs_head-title heading">CASE STUDY</h2>
+          <p class="cs_head-subtitle sub-heading">導入事例</p>
+        </div>
+        <div class="cs_cards">
+          <div class="cs_card">
+            <a class="cs_card-link">
+              <div class="cs_card-image first-logo">
+                <img
+                  src="./img/cs_logo1.png"
+                  alt="logo"
+                  width="320"
+                  height="320"
+                />
+              </div>
+              <p class="cs_company">AAA株式会社　様</p>
+              <p class="cs_company-case">ビジネス英語研修</p>
+              <a class="cs_company-link" href="#"><span></span></a>
+            </a>
+          </div>
+          <div class="cs_card">
+            <a class="cs_card-link">
+              <div class="cs_card-image">
+                <img
+                  src="./img/cs_logo2.png"
+                  alt="logo"
+                  width="320"
+                  height="320"
+                />
+              </div>
+              <p class="cs_company">合同会社BBB　様</p>
+              <p class="cs_company-case">異文化コミュニケーション</p>
+              <a class="cs_company-link" href="#"><span></span></a>
+            </a>
+          </div>
+          <div class="cs_card">
+            <a href="" class="cs_card-link">
+              <div class="cs_card-image">
+                <img
+                  src="./img/cs_logo3.png"
+                  alt="logo"
+                  width="320"
+                  height="320"
+                />
+              </div>
+              <p class="cs_company">株式会社CCC　様</p>
+              <p class="cs_company-case">ビジネス留学プログラム</p>
+              <a class="cs_company-link" href="#"><span></span></a>
+            </a>  
+          </div>
+          <div class="cs_card">
+            <a href="" class="cs_card-link">
+              <div class="cs_card-image">
+                <img
+                  src="./img/cs_logo4.png"
+                  alt="logo"
+                  width="320"
+                  height="320"
+                />
+              </div>
+              <p class="cs_company">DDD株式会社　様</p>
+              <p class="cs_company-case">異文化コミュニケーション</p>
+              <a class="cs_company-link" href="#"><span></span></a>
+            </a>  
+          </div>
+          <div class="cs_card">
+            <a href="" class="cs_card-link">
+              <div class="cs_card-image">
+                <img
+                  src="./img/cs_logo5.png"
+                  alt="logo"
+                  width="320"
+                  height="320"
+                />
+              </div>
+              <p class="cs_company">EEE株式会社　様</p>
+              <p class="cs_company-case">ビジネス留学プログラム</p>
+              <a class="cs_company-link" href="#"><span></span></a>
+            </a>  
+          </div>
+          <div class="cs_card">
+            <a href="" class="cs_card-link">
+              <div class="cs_card-image">
+                <img
+                  src="./img/cs_logo6.png"
+                  alt="logo"
+                  width="320"
+                  height="320"
+                />
+              </div>
+              <p class="cs_company">FFF株式会社　様</p>
+              <p class="cs_company-case">ビジネス英語研修</p>
+              <a class="cs_company-link" href="#"><span></span></a>
+            </a>  
+          </div>
+        </div>
+        <div class="cs_vm">
+          <a href="#">View more<span></span></a>
+        </div>
+      </div>
+    </section>
+
+    <section class="news">
+      <div class="news_inner inner">
+        <div class="news_head">
+          <h2 class="news_head-title heading">NEWS</h2>
+          <p class="news_head-subtitle sub-heading">新着情報</p>
+        </div>
+        <div class="news_links">
+          <article class="news_link">
+            <a href="">
+              <div class="news_top">
+                <div class="news_tag">営業時間</div>
+                <time datetime="2021-07-20" class="news_meta">2021.07.20</time>
+              </div>
+              <h3 class="news_title">お盆期間中の営業について</h3>
+            </a>
+          </article>
+          <article class="news_link">
+            <a href="">
+              <div class="news_top">
+                <div class="news_tag">その他</div>
+                <time datetime="2021-06-01" class="news_meta">2021.06.01</time>
+              </div>
+              <h3 class="news_title">新型コロナウイルス対策ご協力のお願い</h3>
+            </a>
+          </article>
+          <article class="news_link">
+            <a href="">
+              <div class="news_top">
+                <div class="news_tag">その他</div>
+                <time datetime="2021-05-01" class="news_meta">2021.05.01</time>
+              </div>
+              <h3 class="news_title">
+                オンライン英会話スクール「グッドイングリッシュオンライン株式会社」との業務提携について
+              </h3>
+            </a>
+          </article>
+        </div>
+        <div class="news_vm">
+          <a href="#">View more<span></span></a>
+        </div>
+      </div>
+    </section>
+
+    <footer class="footer">
+      <div class="footer_inner inner">
+        <div class="footer_contents">
+          <div class="footer_content">
+            <div class="footer_content-head">
+              <h2 class="footer_content-title">DOWNLOAD</h2>
+              <p class="footer_content-text">資料ダウンロード</p>
+            </div>
+            <div class="footer_content-vm">
+              <a href="#">View more</a>
+            </div>
+          </div>
+          <div class="footer_contact">
+            <div class="footer_content-head">
+              <h2 class="footer_content-title">CONTACT</h2>
+              <p class="footer_content-text">お問い合わせ</p>
+            </div>
+            <div class="footer_content-vm">
+              <a href="#">View more</a>
+            </div>
+          </div>
+        </div>
+        <div class="footer_access">
+          <div class="footer_logo">
+            <h3><a href="./top.html">Global Standard</a></h3>
+          </div>
+          <address class="footer_addresses">
+            <p class="footer_address">
+              〒550-1000　大阪市西区土佐堀9-5-5<br />
+              TEL　06-123-4567<br />
+              FAX　06-123-4568
+            </p>
+          </address>
+          <div class="footer_copyright">
+            <small>&copy;2021 Global Standard. All Rights Reserved.</small>
+          </div>
+        </div>
+      </div>
+      <div class="top_info" id="js-top"></div>
+    </footer>
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+    <script src="./js/script.js"></script>
+  </body>
+</html>

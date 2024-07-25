@@ -1,0 +1,5 @@
+AuthType Basic
+AuthGroupFile /dev/null
+AuthName "WebMedia Authentication"
+AuthUserFile "/home/xs5242023/tm-y.net/public_html/onomichi/.htpasswd"
+require valid-user

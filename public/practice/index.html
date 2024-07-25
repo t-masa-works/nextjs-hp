@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="ja">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>初めてのLP</title>
+    <meta name="description" content="デスクリプションです">
+    <link rel="icon" href="favicon.ico">
+    <link rel="stylesheet" href="./css/reset.css">
+    <link rel="stylesheet" href="./css/style.css">
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.0/jquery.min.js"></script>
+     <script>
+       $(function(){
+        $('#course-toggle').click(function() {
+         $('#drawer').toggleClass('open')
+        });
+
+        $(window).scroll
+        (function() {
+         if ($(this).scrollTop() > 80) {
+           $('.back-to-top').fadeIn(300);
+         }else{
+           $('.back-to-top').fadeOut(300);
+         }
+        });
+
+        $('.back-to-top').click(function() {
+          $('html,body').animate({scrollTop: 0}, 500);
+           return false;
+        });
+
+        $('#main img').click(function(){
+          $('#bg-gray').html($(this).prop('outerHTML'));
+          $('#bg-gray').fadeIn(200);
+        });
+          $('#bg-gray, #bg-gray img').click(function(){
+            $('#bg-gray').fadeOut(200);
+          });
+        });
+
+      </script>
+
+</head>
+<body>
+    <header>
+        <div class="container clear">
+            <div class="header-left">
+                <h1 class="header-title">30DAYSトライアル</h1>
+            </div>
+            <div class="header-right">
+                <div class="menu-bar">
+              <ul class="header-nav clear">
+                 <li class="header-nav-item">
+                    <a href="">デイトラとは</a></li>
+                 <li class="header-nav-item" >
+                    <a class="draw" id="course-toggle" href="#">コース一覧</a>
+                  <ul class="drawer" id="drawer">
+                   <li class="drawer-item"><a href="brank">初級コース</a></li>
+                   <li class="drawer-item"><a href="#">中級コース</a></li>
+                   <li class="drawer-item"><a href="#">上級コース</a></li>
+                  </ul>
+                </li>
+                 <li class="header-nav-item">
+                    <a href="">お問い合わせ</a></li>
+              </ul>
+            </div>
+            </div>
+        </div>
+    </header>
+
+    <section class="top">
+     <div class="container">
+        <p class="top-title">
+            1日1題30日で<br>
+            プロのWebエンジニアになろう！
+        </p>
+        <p class="top-subtitle">毎日設定された課題をこなすだけ！<br>
+            未経験から30日でプログラミングスキルをつけよう
+        </p>
+     </div>
+    </section>
+
+    <section class="about section">
+     <div class="container clear">
+        <h2 class="section-title">デイトラとは</h2>
+        <div class="about-left">
+         <!--altには画像の説明を入れる-->
+         <img src="./img/about.png" alt="デイトラとは">
+        </div>
+        <div class="about-right">
+         <p>デイトラとは、無料で・迷わず・楽しく学べるプログラミング学習アプリです。 毎日設定された課題をこなしていくだけで、未経験から30日でプログラミングスキルが身につきます。
+            1日1題30日でプロのWebエンジニアを目指しましょう!
+        </p>
+        </div>
+     </div>
+    </section>
+
+    <section class="course section">
+     <div class="container">
+      <h2 class="section-title">コース一覧</h2>
+      <div class="course-wrapper" id="main">
+        <div class="course-item">
+            <img src="./img/web_first.png" alt="デイトラ初級編">
+            <p>HTML / CSS / Bootstrap</p>
+        </div>
+        <div class="course-item">
+            <img src="./img/web_second.png" alt="デイトラ中級編">
+            <p>HTML / CSS / JavaScript / jQuery</p>
+        </div>
+        <div class="course-item">
+            <img src="./img/web_third.png" alt="デイトラ上級編">
+            <p>PHP / WordPress</p>
+        </div>
+
+        <div id="bg-gray"></div>
+
+      </div>
+     </div>
+    </section>
+
+    <section class="contact section">
+     <div class="container">
+      <h2 class="section-title">お問い合わせ</h2>
+      <p class="contact-massage">さあ今日から30日間を始めよう！</p>
+      <form action="#" method="post">
+        <input type="email" name="email" id="email" placeholder="メールアドレス">
+        <button type="submit" class="btn btn-register">無料で始める</button>
+      </form>
+     </div>
+
+    <div class="back-to-top">∧</div>
+
+    </section>
+    
+    <footer>
+        <div class="container clear">
+         <p class="copyright">Copyright(C) 2020 東京フリーランス ALL Rights Reserved.</p>
+        </div>
+    </footer>
+
+</body>
+</html>

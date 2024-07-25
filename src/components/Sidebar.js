@@ -21,7 +21,7 @@ const Sidebar = () => {
           <Link href="/skills">Skills</Link>
         </li>
         <li>
-          <Link href="/work">Work</Link>
+          <Link href="/work">Works</Link>
         </li>
         <li>
           <Link href="/contact">Contact</Link>
