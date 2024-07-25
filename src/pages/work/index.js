@@ -6,4 +6,13 @@ const WorkPage = () => {
   )
 }
 
+export async function getStaticProps() {
+  return {
+    props: {
+      topImage: "/works.jpg",
+      topText: "Works",
+    },
+  };
+}
+
 export default WorkPage
