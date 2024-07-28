@@ -12,19 +12,19 @@ const Sidebar = () => {
       </div>
       <ul className="flex flex-col gap-5 text-center text-2xl">
         <li>
-          <Link href="/">Top</Link>
+          <Link className="border border-white px-3 py-1 hover:bg-white hover:text-black transition duration-300" href="/">Top</Link>
         </li>
         <li>
-          <Link href="/about">About</Link>
+          <Link className="border border-white px-3 py-1 hover:bg-white hover:text-black transition duration-300" href="/about">About</Link>
         </li>
         <li>
-          <Link href="/skills">Skills</Link>
+          <Link className="border border-white px-3 py-1 hover:bg-white hover:text-black transition duration-300" href="/skills">Skills</Link>
         </li>
         <li>
-          <Link href="/work">Works</Link>
+          <Link className="border border-white px-3 py-1 hover:bg-white hover:text-black transition duration-300" href="/work">Works</Link>
         </li>
         <li>
-          <Link href="/contact">Contact</Link>
+          <Link className="border border-white px-3 py-1 hover:bg-white hover:text-black transition duration-300" href="/contact">Contact</Link>
         </li>
       </ul>
     </div>

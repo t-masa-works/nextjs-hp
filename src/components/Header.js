@@ -9,8 +9,9 @@ const Header = () => {
         <Link href="/">
           <Image
             src="/logo_transparent.png"
-            layout="fill"
-            objectFit="contain"
+            fill
+            sizes="(max-width: 768px) 100vw, 50vw"
+            style={{ objectFit: "contain" }}
             alt="logo"
           />
         </Link>

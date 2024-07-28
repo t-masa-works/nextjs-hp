@@ -13,22 +13,26 @@ const WorkPage = () => {
     <div className="p-5">
       <h2 className="font-bold text-2xl mb-5">制作物一覧</h2>
       <p>※画像をクリックすると拡大。赤文字はリンクです。</p>
-      <div className="grid grid-cols-3 gap-5 mt-5">
+      <div className="grid grid-cols-3 gap-16 mt-5">
         {images.map((image) => (
-          <div key={image.id} className="relative">
+          <div key={image.id} className="relative block">
             <button onClick={() => setIsOpenId(image.id)}>
               <Image
-                className="mb-5 rounded-md hover:opacity-70 transition"
+                className="mb-5 rounded-md hover:opacity-70 hover:scale-110 transition duration-300"
                 src={image.src}
-                layout="responsive"
+                sizes="100vw"
                 width={200}
                 height={200}
-                objectFit="cover"
+                style={{ objectFit: "cover" }}
                 alt={image.alt}
               />
             </button>
             {image.link ? (
-              <Link className="text-red-500" href={image.link}>
+              <Link
+                className="hover:text-red-500 hover:font-bold hover:text-lg transition duration-300 block"
+                href={image.link}
+                target="_blank"
+              >
                 {image.text}
               </Link>
             ) : (
@@ -41,8 +45,9 @@ const WorkPage = () => {
               <button onClick={() => setIsOpenId(null)}>
                 <Image
                   src={image.src}
-                  layout="fill"
-                  objectFit="contain"
+                  fill
+                  sizes="(max-width: 768px) 100vw, 50vw"
+                  style={{ objectFit: "contain" }}
                   alt={image.alt}
                 />
               </button>
