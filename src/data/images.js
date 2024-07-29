@@ -57,6 +57,20 @@ const images = [
   },
   {
     id: 9,
+    src: "/sample_corp.png",
+    alt: "制作課題",
+    text: "SAMPLE_CORP（デイトラ課題）",
+    link: "/sample_corp/index.html",
+  },
+  {
+    id: 10,
+    src: "/sobolon.png",
+    alt: "制作課題",
+    text: "sobolon（デイトラ課題）",
+    link: "/sobolon/index.html",
+  },
+  {
+    id: 11,
     src: "/global_standard.png",
     alt: "卒業制作課題",
     text: "コーポレイトサイト（デイトラ卒業制作課題）",

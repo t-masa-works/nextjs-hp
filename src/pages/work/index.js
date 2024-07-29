@@ -12,7 +12,12 @@ const WorkPage = () => {
   return (
     <div className="p-5">
       <h2 className="font-bold text-2xl mb-5">制作物一覧</h2>
-      <p>※画像をクリックすると拡大。赤文字はリンクです。</p>
+      <p>※画像をクリックすると拡大。</p>
+      <p>デイトラ課題はベーシック認証をかけているものがあります。</p>
+      <p>範囲選択でNAMEとPASSを表示<br/>
+      NAME:<span className="text-white">demo</span><br/>
+      PASS:<span className="text-white">demo</span>
+      </p>
       <div className="grid grid-cols-3 gap-16 mt-5">
         {images.map((image) => (
           <div key={image.id} className="relative block">
