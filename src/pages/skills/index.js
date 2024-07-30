@@ -7,7 +7,7 @@ const SkillsPage = () => {
       <p>※習熟度には差があります。詳しくはお気軽にお尋ねください。</p>
       <h2 className="text-xl font-bold mb-5">Web制作関連</h2>
       <div>
-        <ul className="grid grid-cols-3 place-items-center gap-10">
+        <ul className="grid grid-cols-2 sm:grid-cols-3 place-items-center gap-10">
           <li>
             <Image src="/html-5.svg" width={100} height={100} alt="html"/>
           </li>
@@ -35,7 +35,7 @@ const SkillsPage = () => {
       <hr/>
       <h2 className="pt-10 text-xl font-bold mb-5">学習言語、ツール等</h2>
       <div>
-        <ul className="grid grid-cols-3 place-items-center gap-10">
+        <ul className="grid grid-cols-2 sm:grid-cols-3 place-items-center gap-10">
           <li>
             <Image src="/ruby.svg" width={100} height={100} alt="ruby"/>
           </li>

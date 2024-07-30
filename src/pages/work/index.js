@@ -12,13 +12,25 @@ const WorkPage = () => {
   return (
     <div className="p-5">
       <h2 className="font-bold text-2xl mb-5">制作物一覧</h2>
-      <p>※画像をクリックすると拡大。</p>
-      <p>デイトラ課題はベーシック認証をかけているものがあります。</p>
-      <p>範囲選択でNAMEとPASSを表示<br/>
-      NAME:<span className="text-white">demo</span><br/>
-      PASS:<span className="text-white">demo</span>
-      </p>
-      <div className="grid grid-cols-3 gap-16 mt-5">
+      <div className="flex flex-col gap-5">
+        <p>
+          画像をクリックすると拡大。
+          <br />
+          テキストは<span className="underline text-red-500">リンク</span>です。
+        </p>
+        <p>※マークのついたデイトラ課題はベーシック認証をかけています。</p>
+        <p className="border-2 border-solid">
+          範囲選択でNAMEとPASSを表示
+          <br />
+          遷移先で下記ユーザー名とPASSで閲覧をお願いします。
+          <br />
+          NAME:<span className="text-white">demo</span>
+          <br />
+          PASS:<span className="text-white">demo</span>
+        </p>
+      </div>
+
+      <div className="grid grid-cols-2 md:grid-cols-3 gap-10 md:gap-16 mt-8">
         {images.map((image) => (
           <div key={image.id} className="relative block">
             <button onClick={() => setIsOpenId(image.id)}>

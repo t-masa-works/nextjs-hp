@@ -10,7 +10,7 @@ const Sidebar = () => {
           <Image src="/logo_transparent.png" width={500} height={500} alt="logo"/>
         </Link>
       </div>
-      <ul className="flex flex-col gap-5 text-center text-2xl">
+      <ul className="flex flex-col gap-5 text-center text-2xl text-white font-bold">
         <li>
           <Link className="border border-white px-3 py-1 hover:bg-white hover:text-black transition duration-300" href="/">Top</Link>
         </li>

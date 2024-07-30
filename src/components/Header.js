@@ -4,7 +4,7 @@ import Image from "next/image";
 
 const Header = () => {
   return (
-    <div className="h-10 text-xl sticky md:hidden flex justify-between w-screen px-10 bg-emerald-300 place-items-center">
+    <div className="h-10 text-xl sticky md:hidden flex justify-between w-screen px-7 bg-emerald-300 place-items-center">
       <div className="relative w-10 h-full">
         <Link href="/">
           <Image
@@ -16,7 +16,7 @@ const Header = () => {
           />
         </Link>
       </div>
-      <ul className="flex gap-5">
+      <ul className="flex gap-5 text-sm text-white font-bold">
         <li>
           <Link href="/">Top</Link>
         </li>

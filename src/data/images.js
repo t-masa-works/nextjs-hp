@@ -31,14 +31,14 @@ const images = [
     id: 5,
     src: "/oha.png",
     alt: "oha",
-    text: "OHA!LP（デイトラ課題）",
+    text: "※OHA!LP（デイトラ課題）",
     link: "/oha_exam/index.html",
   },
   {
     id: 6,
     src: "/onomichi.png",
     alt: "onomichi",
-    text: "尾道キャンペーン(デイトラ課題）",
+    text: "※尾道キャンペーン(デイトラ課題）",
     link: "/onomichi/index.html",
   },
   {
@@ -66,14 +66,14 @@ const images = [
     id: 10,
     src: "/sobolon.png",
     alt: "制作課題",
-    text: "sobolon（デイトラ課題）",
+    text: "※sobolon（デイトラ課題）",
     link: "/sobolon/index.html",
   },
   {
     id: 11,
     src: "/global_standard.png",
     alt: "卒業制作課題",
-    text: "コーポレイトサイト（デイトラ卒業制作課題）",
+    text: "※コーポレイトサイト（デイトラ卒業制作課題）",
     link: "/デイトラ卒業制作課題/top.html",
   },
 ];
