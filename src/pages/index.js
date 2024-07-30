@@ -4,10 +4,14 @@ const inter = Inter({ subsets: ["latin"] });
 
 export default function Home() {
   return (
-    <div
-      className={`px-5 py-5 w-full h-screen ${inter.className}`}
-    >
-      <p>コンテンツ</p>
+    <div className={`p-5 h-[50vh] ${inter.className}`}>
+      <h2 className="font-bold text-xl">T.Masa.Worksのポートフォリオサイト</h2>
+
+      <div className="flex flex-col gap-5 pt-5">
+        <p>当ポートフォリオをご覧いただきありがとうございます。</p>
+        <p>このサイトは、Next.jsを用いて作成しています。</p>
+        <p>技術レベルなど,ご参考の一助になればと思います。</p>
+      </div>
     </div>
   );
 }

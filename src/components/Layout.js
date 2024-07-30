@@ -4,6 +4,7 @@ import Header from "./Header";
 import TopImage from "./TopImage";
 import Footer from "./Footer";
 import ContactLink from "./ContactLink";
+import ReturnTopButton from "./ReturnTopButton";
 
 const Layout = ({ children, topImage, topText }) => {
   return (
@@ -19,6 +20,7 @@ const Layout = ({ children, topImage, topText }) => {
           <ContactLink />
         </main>
       </div>
+      <ReturnTopButton />
       <Footer />
     </div>
   );
