@@ -39,21 +39,21 @@ const ContactForm = () => {
       onSubmit={handleSubmit(onSubmit)}
     >
       <div className="sm:flex w-full">
-        <label className="w-36 p-1 mr-1 sm:text-right" htmlFor="name">
+        <label className="w-48 p-1 mr-1 sm:text-right" htmlFor="name">
           名前:
         </label>
         <input className="w-full p-1 rounded-sm" id="name" placeholder="田中　太郎"{...register("name")} />
       </div>
         {errors.name && <p className="text-red-600 font-bold">{errors.name.message}</p>}
       <div className="sm:flex w-full">
-        <label className="w-36 text-right p-1 mr-1" htmlFor="email">
+        <label className="w-48 text-nowrap text-right p-1 mr-1" htmlFor="email">
           メールアドレス:
         </label>
         <input className="w-full p-1 rounded-sm" id="email" placeholder="example@exmaple.com"{...register("email")} />
       </div>
         {errors.email && <p className="text-red-600 font-bold">{errors.email.message}</p>}
       <div className="sm:flex w-full">
-        <label className="w-36 text-right p-1 mr-1" htmlFor="message">
+        <label className="w-48 text-nowrap text-right p-1 mr-1" htmlFor="message">
           お問い合わせ内容:
         </label>
         <textarea className="w-full  h-80 p-1 rounded-sm" id="message" placeholder="問い合わせ内容をここに記載" {...register("message")} />
