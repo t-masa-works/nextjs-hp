@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>HP制作請負　Grim Portfolio</title>
+    <meta name="description" content="Web制作請負 Grim 自己紹介サイト">
+
+    <link rel="shortcut icon" href="favicon.png" type="image/x-icon">
+
+    <link rel="stylesheet" href="./css/reset.css">
+    <link rel="stylesheet" href="./css/style.css">
+
+    <meta name="twitter:card" content="summary_large_image" /> <!--①-->
+    <meta name="twitter:site" content="@with_determinat" /> <!--②-->
+    <meta property="og:url" content="https://tm-y.net/" /> <!--③-->
+    <meta property="og:title" content="勉強1~２週間ぐらいのポートフォリオ" /> <!--④-->
+    <meta property="og:description" content="ノータッチ、未知識からデイトラで初ポートフォリオ" /> <!--⑤-->
+    <meta property="og:image" content="https:///tm-y.net/card.png" /> <!--⑥-->
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.0/jquery.min.js"></script>
+    <script>
+      $(function(){
+        $(window).scroll(function() {
+          if ($(this).scrollTop() > 50) {
+            $('.back-to-top').fadeIn();
+           } else {
+            $('.back-to-top').fadeOut();
+           }
+          });
+
+      $('.back-to-top').click(function(){
+        $('html, body').animate({scrollTop: 0 }, 300);
+        });
+        });
+
+    </script>
+
+</head>
+<body>
+    <header>
+    <div class="container clear">
+     <div class="header-left">
+        <div class="header-left-logo">
+         <a href="http://"><img src="./img/logo.png" alt="logo"></a>
+        </div>
+     </div>
+     <div class="header-right">
+        <div class="header-nav-items">
+         <ul>
+          <li class="header-nav-item"><a href="">自己紹介</a></li>
+          <li class="header-nav-item"><a href="">出来ること</a></li>
+          <li class="header-nav-item"><a href="">制作例</a></li>
+          <li class="header-nav-item"><a href="">お問い合わせ</a></li>
+         </ul>
+        </div>
+     </div>
+    </div>
+    </header>
+
+    <section class="top">
+     <div class="container clear">
+        <h1 class="top-title">My Portfolio</h1>
+        <p class="top-sub-title">ポートフォリオをご覧いただきありがとうございます！</p>
+     </div>
+    </section>
+
+    <section class="about section">
+     <div class="container clear">
+      <h2 class="section-title">自己紹介</h2>
+      <p class="section-sub-title">About Me</p>
+     <div class="about-wrapper">
+       <div class="about-left">
+        <p class="about-main">理想を現実にできる提案を</p>
+        <p class="about-main">想いに寄り添う制作を</p>
+
+        <p class="about-sub">茨城県にて、
+          ホームページ制作を請負っております。<br>
+            一緒に理想のホームページを創りましょう。
+        </p>
+       </div>
+
+      <div class="about-right">
+            <img src="./img/baby rabbit pc.jpeg" alt="自己紹介">
+            <p class="about-name-sub">グリム</p>
+            <p class="about-name">Grim</p>
+        </div>
+      </div>
+
+     </div>
+    </section>
+
+    <section class="service section">
+     <div class="cotainer">
+      <h2 class="section-title">出来ること</h2>
+      <p class="section-sub-title">Service</p>
+     <div class="wrapper grid">
+       <div class="service-item">
+         <img src="./img/rabbit_1.jpeg" alt="制作">
+         <h3 class="service-item-title">ホームページ制作</h3>
+         <p class="service-item-text">ご要望をお聞かせください。少しでも理想に近づけるよう、柔軟に対応させていただきます。</p>
+        </div>
+       <div class="service-item">
+         <img src="./img/PC rabbit.jpeg" alt="修正">
+         <h3 class="service-item-title">ホームページ修正</h3>
+         <p class="service-item-text">変更やレイアウトの崩れなど、ちょっとした困りごとから対応いたします。遠慮せずお申し付けください。</p>
+        </div>
+       <div class="service-item">
+         <img src="./img/baby rabbit 1.jpeg" alt="相談">
+         <h3 class="service-item-title">ホームページ相談</h3>
+         <p class="service-item-text">些細なことでも、悩んだらまずはお話を聞かせてください。無料でご相談に応じます！</p>
+        </div>
+     </div>
+
+     </div>
+    </section>
+
+    <section class="work section">
+     <div class="container clear">
+      <h2 class="section-title">制作例</h2>
+      <p class="section-sub-title">Work</p>
+     <div class="work-wrapper">
+      <div class="work-item">
+        <img src="./img/main-vsual.png" alt="デイトラ簡易版">
+        <h4 class="work-item-title">デイトラ簡易版</h4>
+        <p class="work-item-text">htmlとcssで初めて作成したホームページです。出来上がった時は、素直に感動しました。</p>
+        <a href="../LPBootstrap/index.html" class="work-item-link">サイトを見る</a>
+      </div>
+      <div class="work-item">
+        <img src="img/Bootstrap.png" alt="Bootstrap">
+        <h4 class="work-item-title">テンプレートLP</h4>
+        <p class="work-item-text">Bootstrapで作成したホームページです。便利です。正直ヘッダーはこれに頼りたい。</p>
+        <a href="../Bootstrap/index.html" class="work-item-link">サイトを見る</a>
+      </div>
+     </div>
+     </div>
+
+    </section>
+    <section class="contact section">
+     <div class="container clear">
+       <h2 class="section-title">お問い合わせ</h2>
+       <p class="section-sub-title">Contact</p>
+       <p class="contact-message">「メール」または「Twitter」よりお気軽にご相談ください！</p>
+       <div class="contact-items">
+         <div class="contact-item">
+           <a class="contact-img" href target="">
+            <img src="./img/mail_24.png" alt="" srcset="">
+            <a class="contact-name" href="">info@example.com</a>
+         </div>
+
+          <div class="contact-item">
+            <a  class="contact-img" href="">
+              <img src="./img/2021 Twitter logo - blue.png" alt="" srcset="">
+              <a class="contact-name" href="">@example</a>
+         </div>
+     </div>
+    </section>
+
+    <footer>
+     <div class="container">
+      <p class="copyright">Copyright © 2023 Grim All rights reserved.</p>
+     </div>
+    </footer>
+
+    <div class="back-to-top">Top</div>
+
+
+</body>
+</html>

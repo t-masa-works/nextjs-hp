@@ -1,0 +1,5 @@
+AuthType Basic
+AuthGroupFile /dev/null
+AuthName "WebMedia Authentication"
+AuthUserFile "/home/xs5242023/tm-y.net/public_html/oha_exam/.htpasswd"
+require valid-user
