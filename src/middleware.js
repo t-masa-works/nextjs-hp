@@ -4,10 +4,12 @@ export function middleware(req) {
   const url = req.nextUrl;
   const protectedPaths = [
     "/onomichi/index.html",
-    "/デイトラ卒業制作課題/top.html",
+    "/corporate/top.html",
     "/oha_exam/index.html",
     "/sobolon/index.html",
   ];
+
+  const linksPage = "/work";
 
   if (protectedPaths.includes(url.pathname)) {
     const basicAuth = req.headers.get("authorization");
@@ -31,6 +33,7 @@ export function middleware(req) {
       },
     });
   }
+  return NextResponse.next();
 }
 
 // import { NextRequest, NextResponse } from "next/server";
