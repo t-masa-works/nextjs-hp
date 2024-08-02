@@ -74,7 +74,7 @@ const images = [
     src: "/global_standard.png",
     alt: "卒業制作課題",
     text: "※コーポレイトサイト（デイトラ卒業制作課題）",
-    link: "/デイトラ卒業制作課題/top.html",
+    link: "/corporate/top.html",
   },
 ];
 
