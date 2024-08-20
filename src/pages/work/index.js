@@ -49,6 +49,7 @@ const WorkPage = () => {
                 className="hover:text-red-500 hover:font-bold hover:text-lg transition duration-300 block"
                 href={image.link}
                 target="_blank"
+                prefetch={false}
               >
                 {image.text}
               </Link>
