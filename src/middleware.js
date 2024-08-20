@@ -9,7 +9,7 @@ export function middleware(req) {
     "/sobolon/index.html",
   ];
 
-  if (protectUrl.includes(url.pathname) && url.pathname !== "/work") {
+  if (protectedPaths.includes(url.pathname) && url.pathname !== "/work") {
     const basicAuth = req.headers.get("authorization");
 
     if (basicAuth) {
