@@ -2188,6 +2188,7 @@ dialog::backdrop {
 @media screen and (min-width: 900px) {
   .spot_arrow {
     bottom: -15%;
+    left: calc(50% - 423px);
   }
 }
 
@@ -2450,20 +2451,29 @@ summary .qa_q-deco::after {
   }
 }
 
-details[open] {
-  -webkit-animation: accordion 0.4s ease-in-out;
-          animation: accordion 0.4s ease-in-out;
+details[open] .qa_a {
+  -webkit-animation: accordion 0.4s ease;
+          animation: accordion 0.4s ease;
 }
 @-webkit-keyframes accordion {
   0% {
     opacity: 0;
     height: 0;
   }
-  70% {
+  30% {
     opacity: 0.3;
-    height: 50px;
+    height: 30px;
     @media screen and (min-width: 900px) {
-      details[open] {
+      details[open] .qa_a {
+        height: 80px;
+      }
+    }
+  }
+  70% {
+    opacity: 0.7;
+    height: 70px;
+    @media screen and (min-width: 900px) {
+      details[open] .qa_a {
         height: 80px;
       }
     }
@@ -2478,11 +2488,20 @@ details[open] {
     opacity: 0;
     height: 0;
   }
-  70% {
+  30% {
     opacity: 0.3;
-    height: 50px;
+    height: 30px;
     @media screen and (min-width: 900px) {
-      details[open] {
+      details[open] .qa_a {
+        height: 80px;
+      }
+    }
+  }
+  70% {
+    opacity: 0.7;
+    height: 70px;
+    @media screen and (min-width: 900px) {
+      details[open] .qa_a {
         height: 80px;
       }
     }

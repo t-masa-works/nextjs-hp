@@ -83,7 +83,7 @@ const Policy = () => {
 export async function getStaticProps() {
   return {
     props: {
-      topImage: "/about.jpg",
+      topImage: "/cat.jpg",
       topText: "Policy",
     },
   };
