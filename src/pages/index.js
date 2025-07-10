@@ -1,4 +1,5 @@
 import { Inter } from "next/font/google";
+import Link from "next/link";
 
 const inter = Inter({ subsets: ["latin"] });
 
@@ -12,6 +13,23 @@ export default function Home() {
         <p>このサイトは、Next.jsとTailwindCSSを用いて作成しています。</p>
         <p>技術レベルなど,ご参考の一助になればと思います。</p>
         <p>お問い合わせフォームはデモです。</p>
+      </div>
+      <div className="pt-5">
+        <h3 className="text-lg text-red-500">New -新着情報-</h3>
+        <p className="text-sm">UnityでAndroidアプリを作成しました。</p>
+        <Link
+          href="https://play.google.com/store/apps/details?id=com.T.M.Works.Cat_Escape"
+          className="text-blue-500 underline"
+        >
+          Cat_Escape(Google Playストア)
+        </Link>
+        <p className="text-sm">AndroidアプリのLPページを作成しました。</p>
+        <Link
+          href="https://cat-escape-lp.pages.dev/"
+          className="text-blue-500 underline"
+        >
+          Cat_Escape LP
+        </Link>
       </div>
     </div>
   );
