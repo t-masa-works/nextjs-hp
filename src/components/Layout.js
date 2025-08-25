@@ -8,12 +8,12 @@ import ReturnTopButton from "./ReturnTopButton";
 
 const Layout = ({ children, topImage, topText }) => {
   return (
-    <div>
+    <div class="min-h-[100lvh] grid grid-rows-[auto_1fr_auto]">
       <div className="flex w-full">
         <aside className="hidden md:block w-1/4">
           <Sidebar />
         </aside>
-        <main className="w-screen flex-1 bg-white text-black text-center">
+        <main className="flex-1 bg-white text-black text-center flex-grow w-auto">
           <Header />
           <TopImage imageUrl={topImage} text={topText} />
           {children}

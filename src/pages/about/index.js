@@ -16,7 +16,7 @@ const AboutPage = () => {
         </div>
         <div>
           <Image
-            className="mx-auto mt-8 sm:mt-0 w-48 h-48"
+            className="mx-auto mt-8 sm:mt-0 w-48 h-48 md:mx-0"
             src="/neko.png"
             width={250}
             height={250}
@@ -26,7 +26,7 @@ const AboutPage = () => {
       </div>
       <div className="flex flex-col-reverse sm:flex-row justify-center mt-8 gap-8">
         <Image
-          className="rounded-full mx-auto w-48 h-48"
+          className="rounded-full mx-auto w-48 h-48 md:mx-0"
           src="/baby rabbit on keyboard.jpeg"
           width={250}
           height={250}
